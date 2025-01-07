@@ -5,9 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nahiri Maito</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+<script>
+    // Deshabilita el clic derecho en todo el documento
+    document.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+            alert('La descarga de esta imagen está deshabilitada.');
+        }
+    });
+
+    // Evita el arrastre de imágenes
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+        });
+    });
+</script>
 <body>
-    <h1>¡Bienvenidos a Nahiri Maito!</h1>
-    <p>Explora nuestras libretas personalizadas.</p>
+    <header>
+        <a id="logonm" href="index.html"><img src="/img/logonm.png" alt="Nahiri Maito"></a>
+        <a class="headertext" href="index.html">PORTADA</a>
+        <a class="headertext" href="">Elige tu estilo</a>
+        <div id="profileCircle">
+            <img id="profilenm" src="/img/profile.png" alt="Libretas Personalizadas">
+        </div>
+        <a class="headertext" href="">Nuestro Catálogo</a>
+        <a class="headertext" href="">Diseña la Tuya</a>
+        <a id="iconws" href="https://api.whatsapp.com/send?phone=%2B525614847163">¡Escríbenos!</a>
+    </header>
 </body>
 </html>

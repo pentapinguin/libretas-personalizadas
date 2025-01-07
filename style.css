@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Evita seleccionar la imagen */ 
+/* Evita seleccionar la imagen */ 
+img {
+    user-drag: none;
+    user-select: none; 
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #030D18;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+#logonm {
+    height: 1;
+}
+
+#profileCircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    background-color: #030D18; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+#profilenm {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.headertext {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+.headertext:hover {
+    border-radius: 30px;
+    background-color: #003843;
+}
+#iconws {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    transition: all 0.2s ease-in-out;
+}
+#iconws:hover {
+    border-radius: 30px;
+    color: transparent;
+    background-color: #003843;
+    background-image: url("https://img.icons8.com/?size=100&id=mUZNnRQfuU6L&format=png&color=feeeee");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
