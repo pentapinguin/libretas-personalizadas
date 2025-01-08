@@ -4,18 +4,37 @@
     font-weight: 400;
     font-style: normal;
 }
-/* Evita seleccionar la imagen */ 
-/* Evita seleccionar la imagen */ 
 img {
     user-drag: none;
     user-select: none; 
 }
+body {
+    padding-top: 30px;
+}
+h1, h2, h3 {
+    font-family: 'Lily Script One', cursive;
+    font-size: 2.2rem;
+}
+p {
+    font-family: "Lexend", serif;
+    font-style: normal;
+    font-size: 11pt;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: white;
+}
 header {
+    padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 70px;
+    height: 5vh;
     background-color: #030D18;
     position: fixed;
     top: 0;
@@ -26,37 +45,40 @@ header {
 }
 #logonm {
     height: 1;
+    min-width: 15px;
+    object-fit: cover;
 }
 
 #profileCircle {
-    width: 100px;
     height: 100px;
-    border-radius: 50%; 
-    background-color: #030D18; 
+    border-radius:200px; 
+    background-color: #030D18;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #profilenm {
-    width: 80px; 
-    height: 80px; 
-    border-radius: 50%; 
-    object-fit: cover; 
+    width: 12vh; 
+    height: 12vh;
+    padding-top: 20px;
 }
 
 .headertext {
     font-weight: 600;
+    font-size: .8rem;
     color: white;
     text-decoration: none;
     padding: 15px;
+    text-align: center;
 }
 .headertext:hover {
     border-radius: 30px;
     background-color: #003843;
 }
 #iconws {
+    font-size: 10pt;
     font-weight: 600;
     color: white;
     text-decoration: none;
@@ -71,4 +93,100 @@ header {
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
+}
+.bienvenida {
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+.bienvenida img {
+    width: 100%; 
+    height: 50vh;
+    object-fit: cover;
+}
+#bienvenidatext {
+    width: 100%; 
+    height: 50vh;
+    background-image: url('img/background nm.svg');
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: center;
+}
+#bienvenidatext h1{
+    padding: 15px;
+    font-weight: 800;
+}
+#bienvenidatext p{
+    font-style: oblique;
+    font-stretch: semi-expanded;
+    font-size: 1rem;
+}
+.btn {
+    margin: 15px;
+    border-radius: 100px;
+    background-color: #00B5E5;
+    border: 0px none;
+}
+.btn a {
+    text-decoration: none;
+    color: inherit;
+}
+@keyframes moveArrow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+#btnvermas span {
+    animation: moveArrow 1s infinite;
+}
+#eligetuestilo{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+#eligetuestilo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; 
+}
+.card {
+    padding: 15px;
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }

@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lily+Script+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <script>
     // Deshabilita el clic derecho en todo el documento
@@ -28,14 +29,46 @@
 <body>
     <header>
         <a id="logonm" href="index.html"><img src="/img/logonm.png" alt="Nahiri Maito"></a>
-        <a class="headertext" href="index.html">PORTADA</a>
-        <a class="headertext" href="">Elige tu estilo</a>
+        <a class="headertext" href="index.html">INICIO</a>
+        <a class="headertext" href="">Explorar</a>
         <div id="profileCircle">
             <img id="profilenm" src="/img/profile.png" alt="Libretas Personalizadas">
         </div>
-        <a class="headertext" href="">Nuestro Catálogo</a>
-        <a class="headertext" href="">Diseña la Tuya</a>
+        <a class="headertext" href="">Catálogo</a>
+        <a class="headertext" href="">Crea</a>
         <a id="iconws" href="https://api.whatsapp.com/send?phone=%2B525614847163">¡Escríbenos!</a>
     </header>
+
+    <article class="bienvenida">
+        <img src="https://3.bp.blogspot.com/-iSEeSakxr1o/VK2OJAvKavI/AAAAAAAADbI/fHMhFKHzTSE/s1600/libretasa%2B043.jpg" alt="">
+        <section id="bienvenidatext">
+            <h1>¡Hola!</h1>
+            <p>Estás en el lugar donde tus ideas cobran vida. <br> Diseña una libreta única, hecha a tu medida, <br> o elige entre nuestros diseños ya listos. <br>
+                 Aquí, todo está pensado para reflejar tu estilo y personalidad.</p>
+                 <br>
+            <p>¿Listo para empezar? <br> ¡Inspírate y descubre lo que podemos crear juntos!</p>
+            <button id="btnvermas" class="btn"><a href="#eligetuestilo"><span class="material-symbols-outlined">
+                keyboard_arrow_down
+                </span></a></button>
+        </section>
+    </article>
+
+    <article id="eligetuestilo">
+        <div class="card">
+            <img src="img/libreta1.png" alt="Diseño Moderno">
+            <h3>Diseño Moderno</h3>
+            <p>Patrones minimalistas y elegantes.</p>
+        </div>
+        <div class="card">
+            <img src="img/libreta2.png" alt="Personaliza tu Estilo">
+            <h3>Personaliza tu Estilo</h3>
+            <p>Crea algo único con tu toque personal.</p>
+        </div>
+        <div class="card">
+            <img src="img/libreta3.png" alt="Stock Exclusivo">
+            <h3>Stock Exclusivo</h3>
+            <p>Modelos listos para ti al instante.</p>
+        </div>        
+    </article>
 </body>
 </html>
