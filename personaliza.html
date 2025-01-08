@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu libreta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lily+Script+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<script src="script.js" defer></script>
+<body>
+    <header>
+        <a id="logonm" href="index.html"><img src="img/logonm.png" alt="Nahiri Maito"></a>
+        <a class="headertext" href="catalogolb.html">Catálogo</a>
+        <div id="profileCircle">
+            <img id="profilenm" src="img/profile.png" alt="Libretas Personalizadas">
+        </div>
+        <a class="headertext" href="personaliza.html">Crea la tuya</a>
+        <a id="iconws" href="https://api.whatsapp.com/send?phone=%2B525614847163">¡Escríbenos!</a>
+    </header>
+    <img id="banner" src="https://3.bp.blogspot.com/-iSEeSakxr1o/VK2OJAvKavI/AAAAAAAADbI/fHMhFKHzTSE/s1600/libretasa%2B043.jpg" alt="banner">
+    <article class="cardsarea">
+        <section class="card">
+            <h3>Primero lo primero:</h3>
+            <fieldset>
+                <label for="pasta">Grosor de la Pasta: </label>
+                <div class="card">
+                    <input type="radio" id="Dura" name="pasta" value="Dura" />
+                    <label for="Dura">Pasta Dura (Libro)</label>
+                </div>
+            
+                <div class="card">
+                    <input type="radio" id="Revista" name="pasta" value="Revista" />
+                    <label for="Revista">Pasta Suave (Revista)</label>
+                </div>
+            
+            </fieldset>            
+        </section>
+
+        <section class="card">
+            <h3>Escoge el tamaño:</h3>
+        <fieldset>
+            <label for="pasta">Tamaño: </label>
+            
+            <div class="card">
+                <input type="radio" id="carta" name="size" value="Carta" />
+                <label for="carta">Carta<br>21.5x28cm</label>
+            </div>
+        
+            <div class="card">
+                <input type="radio" id="mediaCarta" name="size" value="mediaCarta" />
+                <label for="mediaCarta">1/2 Carta<br>21.5x14cm</label>
+            </div>
+        
+            <div class="card">
+                <input type="radio" id="cuartoCarta" name="size" value="cuartoCarta" />
+                <label for="cuartoCarta">1/4 Carta<br>10.5x14cm</label>
+            </div>
+                        
+            <div class="card">
+                <input type="radio" id="frances" name="size" value="frances" />
+                <label for="frances">Frances<br>16x21.5cm</label>
+            </div>
+        
+            <div class="card">
+                <input type="radio" id="personalizado" name="size" value="personalizado" />
+                <label for="personalizado">Tamaño personalizado</label>
+            </div>
+        
+            <div id="personalizadoSize" style="display: none;">
+                <label for="altura">Altura (cm): </label>
+                <input type="number" id="altura" name="altura" min="1" max="48"
+                placeholder="Hasta 48cm" /> <br>
+                <label for="base">Base (cm): </label>
+                <input type="number" id="base" name="base" min="1" max="33" placeholder="Hasta 33cm" />
+                <br>
+                <button type="submit" id="submitSize" disabled>Enviar</button>
+            </div>        
+            <p>Medidas aproximadas</p>
+            </fieldset>
+        </section>
+
+            <!-- Popup de error -->
+            <div id="errorPopup" style="display:none;">
+                <p>Las medidas ingresadas son demasiado grandes. <br> 
+                    La altura debe ser menor a 48 cm y la base menor a 33 cm.</p><br><br>
+                <button id="closePopup">Cerrar</button>
+            </div>        
+        
+        <section class="card">
+            <h3>Escojamos el lomo:</h3>
+            <fieldset>
+                <label for="pasta">Tipo de Pasta: </label>
+                <div class="card">
+                    <input type="radio" id="aros" name="lomo" value="espiralMetalica" />
+                    <label for="aros">Espiral Metalica</label>
+                </div>
+            
+                <div class="card">
+                    <input type="radio" id="empalmado" name="lomo" value="empalmado" />
+                    <label for="empalmado">Empalmado</label>
+                </div>
+            
+                <div class="card">
+                    <input type="radio" id="vinipiel" name="lomo" value="vinipiel" />
+                    <label for="vinipiel">Vinipiel</label>
+                </div>
+                            
+                <div class="card">
+                    <input type="radio" id="cubiertacompleta" name="lomo" value="cubiertaCompleta" />
+                    <label for="cubiertacompleta">Cubierta Completa</label>
+                </div>
+            </fieldset>            
+        </section>
+        
+        <section class="card">
+            <h3>Sigamos con el contenido:</h3>
+            <fieldset>
+                <label for="pasta">Interior de las hojas: </label>
+                
+                <div class="card">
+                    <input type="radio" id="hojasblancas" name="contenido" value="hojasblancas" />
+                    <label for="hojasblancas">Blancas</label>
+                </div>
+                
+                <div class="card">
+                    <input type="radio" id="hojasrayas" name="contenido" value="hojasrayas" />
+                    <label for="hojasrayas">Rayas</label>
+                </div>
+                
+                <div class="card">
+                    <input type="radio" id="hojascuadros" name="contenido" value="hojascuadros" />
+                    <label for="hojascuadros">Cuadros</label>
+                    <!-- Select para tamaño de cuadros -->
+                    <div id="select-cuadros" style="display: none;">
+                        <label for="tipoCuadro">Selecciona tamaño de cuadro:</label>
+                        <select id="tipoCuadro">
+                            <option value="hojascuadros_ch">Cuadro chico</option>
+                            <option value="hojascuadros_gde">Cuadro grande</option>
+                        </select>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <input type="radio" id="hojaspuntos" name="contenido" value="hojaspuntos" />
+                    <label for="hojaspuntos">Puntos</label>
+                </div>
+        
+                <div class="card">
+                    <input type="radio" id="hojascolor" name="contenido" value="hojascolor" />
+                    <label for="hojascolor">Color Sólido</label>
+                </div>
+        
+                <div class="card">
+                    <input type="radio" id="hojasperson" name="contenido" value="hojasperson" />
+                    <label for="hojasperson">Hojas Personalizadas</label>
+                    <!-- Textarea para personalización -->
+                    <div id="textarea-personalizado" style="display: none;">
+                        <label for="detalle"></label>
+                        <textarea id="textarea-personalizado" name="detalle" rows="4" cols="50" placeholder="Agenda, Libreta de contactos, Plan Mensual, Libro de ahorro, etc."></textarea>
+                        <button type="submit" id="submithojasperson" disabled>Enviar</button>
+                    </div>
+                </div>
+            </fieldset>            
+        </section>
+
+        <section class="card">
+            <h3>Especificaciones:</h3>
+            <fieldset>
+                <div>
+                <label for="pasta">Números de hojas: </label>
+                <input type="number" name="numhojas" id="numhojas" min="10" max="1000">
+                </div>
+            
+                <div>
+                    <label for="pasta">Impresión frente y vuelta: </label>
+                    <select name="imprfteyvta" id="imprfteyvta">
+                        <option value="fte">Solo frente</option>
+                        <option value="both">Ambos lados</option>
+                    </div>
+            
+            </fieldset>            
+        </section>
+        
+    </article>
+
+</body>
+</html>
