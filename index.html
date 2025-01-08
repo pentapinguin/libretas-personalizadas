@@ -10,27 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lily+Script+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
-<script>
-    // Deshabilita el clic derecho en todo el documento
-    document.addEventListener('contextmenu', function (e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
-            alert('La descarga de esta imagen está deshabilitada.');
-        }
-    });
-
-    // Evita el arrastre de imágenes
-    document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('dragstart', (e) => {
-            e.preventDefault();
-        });
-    });
-</script>
+<script src="script.js" defer></script>
 <body>
     <header>
         <a id="logonm" href="index.html"><img src="img/logonm.png" alt="Nahiri Maito"></a>
-        <a class="headertext" href="index.html">INICIO</a>
-        <a class="headertext" href="">Explorar</a>
+        <a class="headertext" href="#elige tu estilo">Explorar</a>
         <div id="profileCircle">
             <img id="profilenm" src="img/profile.png" alt="Libretas Personalizadas">
         </div>
@@ -54,21 +38,28 @@
     </article>
 
     <article id="eligetuestilo">
-        <div class="card">
-            <img src="img/libreta1.png" alt="Diseño Moderno">
-            <h3>Diseño Moderno</h3>
-            <p>Patrones minimalistas y elegantes.</p>
-        </div>
-        <div class="card">
-            <img src="img/libreta2.png" alt="Personaliza tu Estilo">
-            <h3>Personaliza tu Estilo</h3>
-            <p>Crea algo único con tu toque personal.</p>
-        </div>
-        <div class="card">
-            <img src="img/libreta3.png" alt="Stock Exclusivo">
-            <h3>Stock Exclusivo</h3>
-            <p>Modelos listos para ti al instante.</p>
-        </div>        
+        <h1>Elige tu estilo:</h1>
+        <section class="cardsarea">
+            </a>
+            <a href="">
+                <div class="card">
+                    <img src="img/libreta2.png" alt="Personalizada a tu Estilo">
+                    <h3>Personaliza</h3>
+                    <p>Creada a tu necesidades.</p>
+                </div>
+            </a>
+    
+            <a href="">
+                <div class="card">
+                    <img src="img/libreta3.png" alt="Stock Exclusivo">
+                    <h3>Stock Exclusivo</h3>
+                    <p>Modelos listos para ti.</p>
+                </div>   
+            </a>
+              
+        </section>
     </article>
+
+
 </body>
 </html>
