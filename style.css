@@ -5,21 +5,28 @@
     font-weight: 400;
     font-style: normal;
 }
+
 img {
     -webkit-user-drag: none;
     user-select: none;
 }
+
 body {
     padding-top: 30px;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-family: 'Lily Script One', cursive;
     font-size: 8vh;
 }
+
 p {
     font-family: "Lexend", serif;
     font-style: normal;
 }
+
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 1,
@@ -45,25 +52,29 @@ header {
     z-index: 1;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 #logonm {
     height: auto;
     min-width: 15px;
     object-fit: cover;
 }
+
 #profileCircle {
     height: 14vh;
-    border-radius:20vh; 
+    border-radius: 20vh;
     background-color: #030D18;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 #profilenm {
-    width: 12vh; 
-    height: 12vh;
-    padding-top: 20px;
+    width: 10vh;
+    height: 10vh;
+    padding-top: 3vh;
 }
+
 .headertext {
     font-weight: 600;
     font-size: 1.5vh;
@@ -72,10 +83,12 @@ header {
     padding: 15px;
     text-align: center;
 }
+
 .headertext:hover {
     border-radius: 30px;
     background-color: #003843;
 }
+
 #iconws {
     font-size: 1.5vh;
     font-weight: 600;
@@ -84,6 +97,7 @@ header {
     padding: 15px;
     transition: all 0.2s ease-in-out;
 }
+
 #iconws:hover {
     border-radius: 30px;
     color: transparent;
@@ -104,11 +118,13 @@ header {
     text-align: center;
     background-color: #f5f5f5;
 }
+
 .bienvenida img {
     width: 100%;
     height: 50vh;
     object-fit: cover;
 }
+
 #bienvenidatext {
     width: 100%;
     height: 50vh;
@@ -117,36 +133,44 @@ header {
     background-size: 140%;
     background-position: center;
 }
+
 #bienvenidatext h1 {
     padding: 15px;
     font-weight: 800;
 }
+
 #bienvenidatext p {
     font-style: oblique;
     font-stretch: semi-expanded;
     font-size: 2vh;
 }
+
 .btn {
     margin: 15px;
     border-radius: 100px;
     background-color: #00B5E5;
     border: none;
 }
+
 .btn a {
     text-decoration: none;
     color: inherit;
 }
+
 @keyframes moveArrow {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(10px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
+
 #btnvermas span {
     animation: moveArrow 1s infinite;
 }
@@ -164,6 +188,7 @@ header {
     justify-content: center;
     gap: 20px;
 }
+
 #eligetuestilo h1 {
     margin: 0 auto;
     text-align: center;
@@ -171,61 +196,128 @@ header {
 
 /* ==== Sección: Cards ==== */
 .cardsarea {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 2%;
+
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
-.cardsarea img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px 10px 0 0;
-}
-.cardsarea a {
-    margin: 15px;
-}
+
 .card {
     background-color: white;
-    padding: 15px;
-    display: inline-block;
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    justify-content: center;
+    /* Diseño de la card */
+    border: 2px solid #ddd;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    height: auto;
-    max-width: 300px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Tamaño de la card */
+    float: left;
+    max-width: 50%;
+    margin: 10px;
 }
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-    object-fit: contain;
+    max-width: 40vh;
 }
+
+
+/* ==== Si la pantalla mide menos de 700px ==== */
+@media (max-width: 700px) {
+    .card {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
 .card h3 {
     margin: 10px 0;
     font-size: 2vh;
 }
+
 .card p {
     color: #555;
     font-size: 2vh;
     font-style: italic;
+    margin-bottom: 15px;
 }
-.card:hover {
-    transform: scale(1.05);
+
+.card-container {
+    margin: 15px;
 }
+
+.card-container img {
+    height: 15vh;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 50vh;
+    box-sizing: border-box;
+}
+
+.card-details {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    /* Añade padding para un mejor espaciado */
+}
+
+.card-radio {
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    word-wrap: break-word;
+    /* Permite que las palabras largas se dividan y ajusten al contenedor */
+    overflow: hidden;
+    /* Oculta el texto que se desborda */
+    text-overflow: ellipsis;
+    /* Añade puntos suspensivos (...) al texto que se desborda */
+    white-space: nowrap;
+}
+
+.card-details img {
+    max-height: 20vh;
+}
+
+.card-details:hover,
+#personalizadoSize {
+    transform: rotate(1deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#personalizadoSize {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: auto;
+    box-sizing: border-box;
+}
+
 /* ==== Personaliza Page ==== */
-#banner{
+#banner {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
+
+
 /* ==== Area de seleccion de "Tamaño personalizado" ==== */
 #personalizadoSize {
     margin-top: 15px;
@@ -259,15 +351,19 @@ button:disabled {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para mayor contraste */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo más oscuro para mayor contraste */
     color: white;
     padding: 20px;
     border-radius: 10px;
-    width: auto; /* Ajustar el tamaño */
-    max-width: 90%; /* Para evitar que sea más grande que la pantalla */
+    width: auto;
+    /* Ajustar el tamaño */
+    max-width: 90%;
+    /* Para evitar que sea más grande que la pantalla */
     text-align: center;
     z-index: 9999;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para darle un mejor enfoque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra para darle un mejor enfoque */
 }
 
 #errorPopup p {
@@ -278,7 +374,8 @@ button:disabled {
 
 #errorPopup button {
     padding: 10px 15px;
-    background-color: #FF6347; /* Color más llamativo */
+    background-color: #FF6347;
+    /* Color más llamativo */
     color: white;
     border: none;
     border-radius: 5px;
@@ -289,6 +386,7 @@ button:disabled {
 #errorPopup button:hover {
     background-color: #FF4500;
 }
+
 #textarea-personalizado {
     width: 100%;
     margin-top: 10px;
