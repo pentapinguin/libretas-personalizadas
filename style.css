@@ -12,7 +12,10 @@ img {
 }
 
 body {
-    padding-top: 30px;
+    padding-top: 10px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 h1,
@@ -39,7 +42,7 @@ header {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 5vh;
+    height: 40px;
     background-color: #030D18;
     position: fixed;
     top: 0;
@@ -213,13 +216,6 @@ header {
 
 .card img {
     max-width: 40vh;
-}
-
-@media (max-width: 700px) {
-    .card {
-        flex: 1 1 calc(100% - 20px);
-        /* Una columna en pantallas pequeñas */
-    }
 }
 
 .card h3,
@@ -410,4 +406,124 @@ input[type="number"] {
 
 .card.error {
     border: 2px solid red;
+}
+
+/* ==== Estilos Movil ==== */
+@media (max-width: 700px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #logonm {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #logonm img {
+        width: auto;
+        /* El doble del contenedor para cortar a la mitad */
+        height: 40px;
+        position: absolute;
+        left: 0px;
+        top: 30px;
+        /* Mover la imagen para mostrar solo la mitad derecha */
+        top: 0;
+    }
+
+    #iconws {
+        margin-right: 30px;
+        padding: 0px;
+    }
+
+    /* ==== Sección: Bienvenida ==== */
+    .bienvenida img {
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+    }
+
+    #bienvenidatext {
+        width: 90%;
+        height: 50vh;
+        background-image: url('img/background nm.svg');
+        background-repeat: no-repeat;
+        background-size: 200vh;
+        background-position: center;
+        box-shadow: white 10px 10px 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 2rem;
+    }
+
+    .eligetuestilo {
+        height: 100%;
+    }
+
+    .cardsarea {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 70vh;
+        overflow: visible;
+    }
+
+    .card {
+        margin-bottom: 5%;
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    .card img {
+        height: 20vh;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    .card-container {
+        display: flex;
+        margin: 10px 0 0 0;
+        padding: 0;
+    }
+
+    .card-details {
+        padding: 10px;
+        white-space: normal;
+        width: calc(45% - 20px);
+    }
+
+    .card-radio {
+        padding: 0;
+        white-space: normal;
+        font-size: 1rem;
+    }
+
+    .card-details img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    button {
+        position: fixed;
+        z-index: 1;
+        bottom: 2%;
+    }
+
+    .areamobile-only {
+        display: block;
+        height: 10%;
+    }
 }
