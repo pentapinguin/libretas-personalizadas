@@ -12,8 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lily+Script+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="script.js" defer></script>
 </head>
-<script src="script.js" defer></script>
 
 <body>
     <header>
@@ -30,24 +30,63 @@
         alt="banner">
 
     <article class="cardsarea">
-        <section class="card" id="cardPasta">
-            <h3>Primero lo primero:</h3>
-            <label for="pasta">Grosor de la Pasta: </label>
-            <section class="card-container">
-                <section class="card-content">
-                    <section class="card-details">
-                        <img src="img/Lomos/Asset Lomo Completa Cartone.png" alt="cubiertaCompleta">
-                        <div class="card-radio">
-                            <input type="radio" id="Dura" name="pasta" value="Dura" />
-                            <label for="Dura">Pasta Dura (Libro)</label>
-                        </div>
+        <!-- cardLomo y cardPasta -->
+        <section>
+            <section class="card" id="cardPasta">
+                <h3>Primero lo primero:</h3>
+                <label for="pasta">Grosor de la Pasta: </label>
+                <section class="card-container">
+                    <section class="card-content">
+                        <section class="card-details">
+                            <img src="img/Lomos/Asset Lomo Completa Cartone.png" alt="cubiertaCompleta">
+                            <div class="card-radio">
+                                <input type="radio" id="Dura" name="pasta" value="Dura" />
+                                <label for="Dura">Pasta Dura (Libro)</label>
+                            </div>
+                        </section>
+                        <section class="card-details">
+                            <img src="img/Lomos/Asset Lomo Stapled Megazine.png" alt="">
+                            <div class="card-radio">
+                                <input type="radio" id="suave" name="pasta" value="suave" />
+                                <label for="suave">Pasta Suave (Revista)</label>
+                            </div>
+                        </section>
                     </section>
-                    <section class="card-details">
-                        <img src="img/Lomos/Asset Lomo Stapled Megazine.png" alt="">
-                        <div class="card-radio">
-                            <input type="radio" id="suave" name="pasta" value="suave" />
-                            <label for="suave">Pasta Suave (Revista)</label>
-                        </div>
+                </section>
+            </section>
+
+            <section class="card" id="cardLomo">
+                <h3>Escojamos el lomo:</h3>
+                <section class="card-container">
+                    <section class="card-content">
+                        <section class="card-details">
+                            <img src="img/Lomos/LomoAros.png" alt="">
+                            <div class="card-radio">
+                                <input type="radio" id="aros" name="lomo" value="espiralMetalica" />
+                                <label for="aros">Espiral Metalica</label>
+                            </div>
+                        </section>
+                        <section class="card-details">
+                            <img src="img/Lomos/Asset Lomo Stapled Megazine.png" alt="">
+                            <div class="card-radio">
+                                <input type="radio" id="empalmado" name="lomo" value="empalmado" />
+                                <label for="empalmado">Empalmado</label>
+                            </div>
+                        </section>
+                        <section class="card-details">
+                            <img src="img/Lomos/Asset Lomo Holandesa Vinipiel.png" alt="">
+                            <div class="card-radio">
+                                <input type="radio" id="vinipiel" name="lomo" value="vinipiel" />
+                                <label for="vinipiel">Vinipiel</label>
+                            </div>
+                        </section>
+                        <section class="card-details">
+                            <img src="img/Lomos/Asset Lomo Completa Cartone.png" alt="cubiertaCompleta">
+                            <div class="card-radio">
+                                <input type="radio" id="cubiertacompleta" name="lomo" value="cubiertaCompleta" />
+                                <label for="cubiertacompleta">Cubierta Completa</label>
+                            </div>
+                        </section>
                     </section>
                 </section>
             </section>
@@ -94,14 +133,13 @@
                         </div>
                     </div>
 
-                    <section id="personalizadoSize" class="card-radio" style="display: none" ;>
+                    <section id="personalizadoSize" class="card-radio" style="display: none;">
                         <label for="altura">Altura (cm): </label>
                         <input type="number" id="altura" name="altura" min="1" max="48" placeholder="Hasta 48cm" />
                         <br>
                         <label for="base">Base (cm): </label>
                         <input type="number" id="base" name="base" min="1" max="33" placeholder="Hasta 33cm" />
                         <br>
-                        <button type="submit" id="submitSize" disabled>Enviar</button>
                     </section>
                 </section>
             </section>
@@ -114,42 +152,6 @@
                 La altura debe ser menor a 48 cm y la base menor a 33 cm.</p><br><br>
             <button id="closePopup">Cerrar</button>
         </div>
-
-        <section class="card" id="cardLomo">
-            <h3>Escojamos el lomo:</h3>
-            <section class="card-container">
-                <section class="card-content">
-                    <section class="card-details">
-                        <img src="img/Lomos/LomoAros.png" alt="">
-                        <div class="card-radio">
-                            <input type="radio" id="aros" name="lomo" value="espiralMetalica" />
-                            <label for="aros">Espiral Metalica</label>
-                        </div>
-                    </section>
-                    <section class="card-details">
-                        <img src="img/Lomos/Asset Lomo Stapled Megazine.png" alt="">
-                        <div class="card-radio">
-                            <input type="radio" id="empalmado" name="lomo" value="empalmado" />
-                            <label for="empalmado">Empalmado</label>
-                        </div>
-                    </section>
-                    <section class="card-details">
-                        <img src="img/Lomos/Asset Lomo Holandesa Vinipiel.png" alt="">
-                        <div class="card-radio">
-                            <input type="radio" id="vinipiel" name="lomo" value="vinipiel" />
-                            <label for="vinipiel">Vinipiel</label>
-                        </div>
-                    </section>
-                    <section class="card-details">
-                        <img src="img/Lomos/Asset Lomo Completa Cartone.png" alt="cubiertaCompleta">
-                        <div class="card-radio">
-                            <input type="radio" id="cubiertacompleta" name="lomo" value="cubiertaCompleta" />
-                            <label for="cubiertacompleta">Cubierta Completa</label>
-                        </div>
-                    </section>
-                </section>
-            </section>
-        </section>
 
         <section class="card" id="cardCont">
             <h3>Sigamos con el contenido:</h3>
@@ -210,7 +212,6 @@
                                     <label for="detalle"></label>
                                     <textarea id="textarea-personalizado" name="detalle" rows="4" cols="50"
                                         placeholder="Agenda, Libreta de contactos, Plan Mensual, Libro de ahorro, etc."></textarea>
-                                    <button type="submit" id="submithojasperson" disabled>Enviar</button>
                                 </div>
                             </div>
                         </section>
@@ -236,6 +237,7 @@
                                 <select name="imprfteyvta" id="imprfteyvta">
                                     <option value="fte">Solo frente</option>
                                     <option value="both">Ambos lados</option>
+                                </select>
                             </div>
                         </section>
                     </section>
@@ -244,6 +246,9 @@
         </section>
     </article>
 
+    <div id="buttonsubmit">
+        <button type="button" id="submitinfo" disabled>Enviar</button>
+    </div>
 </body>
 
 </html>
